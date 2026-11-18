@@ -1,3 +1,5 @@
+import os
+import subprocess
 import streamlit as st
 import duckdb
 import pandas as pd
@@ -13,6 +15,14 @@ st.set_page_config(
 )
 
 DB_PATH = "data/warehouse.duckdb"
+
+# Auto-generate database and models if missing on Streamlit Cloud
+if not os.path.exists(DB_PATH):
+    os.makedirs("data", exist_ok=True)
+    subprocess.run(["python", "generator/generate_logs.py"])
+    subprocess.run(["python", "models/run_transformations.py"])
+    subprocess.run(["python", "engine/finops_engine.py"])
+    subprocess.run(["python", "engine/remediation_engine.py"])
 
 @st.cache_resource
 def get_connection():
