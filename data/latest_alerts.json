@@ -1,0 +1,72 @@
+[
+  {
+    "channel": "#data-governance",
+    "severity": "MEDIUM",
+    "title": "\ud83d\uddd1\ufe0f Zombie Table Storage Waste: staging.tbl_effort",
+    "message": "Table `staging.tbl_effort` owned by Data Engineering is 420.3 GB, costs $9.44/month, and has not been accessed in 210 days.",
+    "recommended_action": "Archive table to cold storage or drop table if no longer required."
+  },
+  {
+    "channel": "#data-governance",
+    "severity": "MEDIUM",
+    "title": "\ud83d\uddd1\ufe0f Zombie Table Storage Waste: staging.tbl_fly",
+    "message": "Table `staging.tbl_fly` owned by Product Analytics is 199.4 GB, costs $4.48/month, and has not been accessed in 245 days.",
+    "recommended_action": "Archive table to cold storage or drop table if no longer required."
+  },
+  {
+    "channel": "#data-governance",
+    "severity": "MEDIUM",
+    "title": "\ud83d\uddd1\ufe0f Zombie Table Storage Waste: staging.tbl_war",
+    "message": "Table `staging.tbl_war` owned by Machine Learning is 135.4 GB, costs $3.04/month, and has not been accessed in 167 days.",
+    "recommended_action": "Archive table to cold storage or drop table if no longer required."
+  },
+  {
+    "channel": "#data-governance",
+    "severity": "MEDIUM",
+    "title": "\ud83d\uddd1\ufe0f Zombie Table Storage Waste: analytics.tbl_fire",
+    "message": "Table `analytics.tbl_fire` owned by Finance BI is 130.1 GB, costs $2.92/month, and has not been accessed in 164 days.",
+    "recommended_action": "Archive table to cold storage or drop table if no longer required."
+  },
+  {
+    "channel": "#data-governance",
+    "severity": "MEDIUM",
+    "title": "\ud83d\uddd1\ufe0f Zombie Table Storage Waste: raw.tbl_figure",
+    "message": "Table `raw.tbl_figure` owned by Machine Learning is 129.8 GB, costs $2.91/month, and has not been accessed in 133 days.",
+    "recommended_action": "Archive table to cold storage or drop table if no longer required."
+  },
+  {
+    "channel": "#data-engineering-alerts",
+    "severity": "CRITICAL",
+    "title": "\ud83d\udea8 Pipeline Reliability Failure: pipe_page_14",
+    "message": "Pipeline `pipe_page_14` managed by Product Analytics has a success rate of only 54.55% with 5 recent failures.",
+    "recommended_action": "Inspect schema drift, check upstream dependencies, and verify error logs in DuckDB/orchestrator."
+  },
+  {
+    "channel": "#data-engineering-alerts",
+    "severity": "CRITICAL",
+    "title": "\ud83d\udea8 Pipeline Reliability Failure: pipe_pass_7",
+    "message": "Pipeline `pipe_pass_7` managed by Product Analytics has a success rate of only 57.14% with 3 recent failures.",
+    "recommended_action": "Inspect schema drift, check upstream dependencies, and verify error logs in DuckDB/orchestrator."
+  },
+  {
+    "channel": "#data-engineering-alerts",
+    "severity": "CRITICAL",
+    "title": "\ud83d\udea8 Pipeline Reliability Failure: pipe_painting_0",
+    "message": "Pipeline `pipe_painting_0` managed by Finance BI has a success rate of only 60.0% with 6 recent failures.",
+    "recommended_action": "Inspect schema drift, check upstream dependencies, and verify error logs in DuckDB/orchestrator."
+  },
+  {
+    "channel": "#data-engineering-alerts",
+    "severity": "CRITICAL",
+    "title": "\ud83d\udea8 Pipeline Reliability Failure: pipe_company_9",
+    "message": "Pipeline `pipe_company_9` managed by Finance BI has a success rate of only 62.5% with 3 recent failures.",
+    "recommended_action": "Inspect schema drift, check upstream dependencies, and verify error logs in DuckDB/orchestrator."
+  },
+  {
+    "channel": "#data-engineering-alerts",
+    "severity": "CRITICAL",
+    "title": "\ud83d\udea8 Pipeline Reliability Failure: pipe_send_4",
+    "message": "Pipeline `pipe_send_4` managed by Product Analytics has a success rate of only 63.64% with 4 recent failures.",
+    "recommended_action": "Inspect schema drift, check upstream dependencies, and verify error logs in DuckDB/orchestrator."
+  }
+]
